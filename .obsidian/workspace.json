@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/architecture/event-driven-design/test.md",
+                "file": "learning/ai/codex-context-skills-subagents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "codex-context-skills-subagents"
             }
           }
         ]
@@ -193,7 +193,11 @@
   },
   "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "learning/ai/codex-cli-slash-commands.md",
+    "learning/ai/codex-context-skills-subagents.md",
+    "AGENTS.md",
     "learning/architecture/event-driven-design/test.md",
+    "learning/ai",
     "learning/architecture/event-driven-design",
     "learning/architecture",
     "learning",
