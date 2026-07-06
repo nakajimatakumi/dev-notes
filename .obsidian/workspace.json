@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+                "file": "learning/basic-knowledge/http-error-status-codes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "event-definition-learning-roadmap"
+              "title": "http-error-status-codes"
             }
           }
         ]
@@ -191,13 +191,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b819fe80b96a3aa9",
+  "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+    "learning/basic-knowledge/http-error-status-codes.md",
+    "learning/basic-knowledge",
     "learning/ai/codex-cli/codex-context-skills-subagents.md",
     "learning/ai/codex-cli/codex-cli-slash-commands.md",
     "learning/ai/codex-cli",
     "AGENTS.md",
-    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
     "learning/architecture/event-driven-design/test.md",
     "learning/ai/codex-context-skills-subagents.md",
     "learning/ai/codex-cli-slash-commands.md",
