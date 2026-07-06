@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/ai/codex-context-skills-subagents.md",
+                "file": "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "codex-context-skills-subagents"
+              "title": "event-definition-learning-roadmap"
             }
           }
         ]
@@ -191,12 +191,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59f39989659268d6",
+  "active": "b819fe80b96a3aa9",
   "lastOpenFiles": [
-    "learning/ai/codex-cli-slash-commands.md",
-    "learning/ai/codex-context-skills-subagents.md",
+    "learning/ai/codex-cli/codex-context-skills-subagents.md",
+    "learning/ai/codex-cli/codex-cli-slash-commands.md",
+    "learning/ai/codex-cli",
     "AGENTS.md",
+    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
     "learning/architecture/event-driven-design/test.md",
+    "learning/ai/codex-context-skills-subagents.md",
+    "learning/ai/codex-cli-slash-commands.md",
     "learning/ai",
     "learning/architecture/event-driven-design",
     "learning/architecture",
