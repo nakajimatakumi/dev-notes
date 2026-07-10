@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENTS.md",
+                "file": "learning/basic-knowledge/http-error-status-codes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "http-error-status-codes"
             }
           }
         ]
@@ -169,6 +169,13 @@
   },
   "active": "fe71515b19b85370",
   "lastOpenFiles": [
+    "AGENTS.md",
+    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+    "learning/basic-knowledge/http-error-status-codes.md",
+    "learning/basic-knowledge",
+    "learning/ai/codex-cli/codex-context-skills-subagents.md",
+    "learning/ai/codex-cli/codex-cli-slash-commands.md",
+    "learning/ai/codex-cli",
     "/learning/basic-knowledge/http-error-status-codes.md",
     "/learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
     "/learning/ai/codex-cli/codex-context-skills-subagents.md",
@@ -181,11 +188,8 @@
     "/learning",
     "learning/ai/codex-context-skills-subagents.md",
     "learning/architecture/event-driven-design/test.md",
-    "AGENTS.md",
     "learning/ai/codex-cli-slash-commands.md",
     "learning/architecture/event-driven-design",
-    "learning/ai",
-    "learning/architecture",
-    "learning"
+    "learning/ai"
   ]
 }
