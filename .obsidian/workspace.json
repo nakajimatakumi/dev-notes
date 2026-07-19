@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+                "file": "learning/ai/codex-cli/codex-cli-slash-commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "event-definition-learning-roadmap"
+              "title": "codex-cli-slash-commands"
             }
           }
         ]
@@ -193,12 +193,12 @@
   },
   "active": "59f39989659268d6",
   "lastOpenFiles": [
-    "AGENTS.md",
-    "learning/basic-knowledge/http-error-status-codes.md",
-    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
-    "learning/basic-knowledge",
     "learning/ai/codex-cli/codex-context-skills-subagents.md",
     "learning/ai/codex-cli/codex-cli-slash-commands.md",
+    "learning/basic-knowledge/http-error-status-codes.md",
+    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+    "AGENTS.md",
+    "learning/basic-knowledge",
     "learning/ai/codex-cli",
     "learning/architecture/event-driven-design/test.md",
     "learning/ai/codex-context-skills-subagents.md",
