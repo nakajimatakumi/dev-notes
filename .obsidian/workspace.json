@@ -74,7 +74,8 @@
               "title": "ブックマーク"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,7 +192,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59f39989659268d6",
+  "active": "9f715396f31fe745",
   "lastOpenFiles": [
     "learning/ai/codex-cli/codex-context-skills-subagents.md",
     "learning/ai/codex-cli/codex-cli-slash-commands.md",

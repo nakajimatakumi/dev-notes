@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gitコミット"
+  short_description: "現在のリポジトリの変更を安全に確認してGitコミットを作成"
+  default_prompt: "Use -commit to review and commit the relevant changes in this project without pushing."

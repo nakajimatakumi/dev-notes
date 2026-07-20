@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gitコミット＆プッシュ"
+  short_description: "変更確認からコミット作成とリモートへのプッシュまでを安全に実行"
+  default_prompt: "Use -commit-push to review, commit, and safely push the relevant changes in this project."
