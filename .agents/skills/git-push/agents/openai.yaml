@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gitプッシュ"
+  short_description: "既存コミットを確認して接続済みGitリモートへ安全にプッシュ"
+  default_prompt: "Use -push to safely push the existing commits in this project to its configured remote."
