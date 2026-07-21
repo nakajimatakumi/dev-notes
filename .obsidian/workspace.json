@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/ai/codex-cli/codex-cli-slash-commands.md",
+                "file": "diary/2026/2026-07-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "codex-cli-slash-commands"
+              "title": "2026-07-20"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "ブックマーク"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -192,12 +191,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9f715396f31fe745",
+  "active": "92a1c58dbdf5a52d",
   "lastOpenFiles": [
-    "learning/ai/codex-cli/codex-context-skills-subagents.md",
-    "learning/ai/codex-cli/codex-cli-slash-commands.md",
-    "learning/basic-knowledge/http-error-status-codes.md",
+    "question-logs/2026-07-22.md",
+    "learning/basic-knowledge/http-get-post-navigation.md",
+    "learning/health/hiit-and-running-guide.md",
+    "learning/health",
+    "question-logs/2026-07-20.md",
+    "question-logs/2026-07-21.md",
+    "learning/ai/generative-ai-performance-improvements.md",
+    "diary/2026/2026-07-20.md",
+    "diary/2026",
+    "diary",
+    "learning/architecture/requirements-definition/requirements-definition-guide.md",
     "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
+    "learning/basic-knowledge/http-error-status-codes.md",
+    "question-logs/README.md",
+    "learning/architecture/requirements-definition",
+    "learning/ai/codex-cli/codex-cli-slash-commands.md",
+    "learning/ai/codex-cli/codex-context-skills-subagents.md",
     "AGENTS.md",
     "learning/basic-knowledge",
     "learning/ai/codex-cli",
