@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/2026/2026-07-22.md",
+                "file": "diary/2026/2026-07-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-22"
+              "title": "2026-07-23"
             }
           }
         ]
@@ -180,6 +180,7 @@
   "active": "7705861dc6b5b3d9",
   "lastOpenFiles": [
     "diary/2026/2026-07-22.md",
+    "diary/2026/2026-07-23.md",
     "diary/2026/2026-07-21.md",
     "diary/2026/2026-07-20.md",
     "diary/template.md",
@@ -213,7 +214,6 @@
     "question-logs/README.md",
     "question-logs",
     "/diary/2026/2026-07-20.md",
-    "learning/basic-knowledge/http-error-status-codes.md",
-    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md"
+    "learning/basic-knowledge/http-error-status-codes.md"
   ]
 }
