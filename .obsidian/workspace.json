@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/2026/2026-07-20.md",
+                "file": "diary/2026/2026-07-25.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-20"
+              "title": "2026-07-25"
             }
           }
         ]
@@ -191,20 +191,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "92a1c58dbdf5a52d",
+  "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "diary/2026/2026-07-24.md",
+    "diary/2026/2026-07-25.md",
+    "learning/health/hiit-and-running-guide.md",
+    "diary/2026/2026-07-20.md",
+    "diary/template.md",
+    "diary/2026/2026-07-23.md",
+    "diary/2026/2026-07-22.md",
+    "diary/2026/2026-07-21.md",
+    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
     "question-logs/2026-07-22.md",
     "learning/basic-knowledge/http-get-post-navigation.md",
-    "learning/health/hiit-and-running-guide.md",
     "learning/health",
     "question-logs/2026-07-20.md",
     "question-logs/2026-07-21.md",
     "learning/ai/generative-ai-performance-improvements.md",
-    "diary/2026/2026-07-20.md",
     "diary/2026",
     "diary",
     "learning/architecture/requirements-definition/requirements-definition-guide.md",
-    "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
     "learning/basic-knowledge/http-error-status-codes.md",
     "question-logs/README.md",
     "learning/architecture/requirements-definition",
