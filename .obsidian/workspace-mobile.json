@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/2026/2026-07-26.md",
+                "file": "diary/2026/2026-07-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-26"
+              "title": "2026-07-27"
             }
           }
         ]
@@ -179,8 +179,9 @@
   },
   "active": "7705861dc6b5b3d9",
   "lastOpenFiles": [
-    "diary/2026/2026-07-23.md",
     "diary/2026/2026-07-26.md",
+    "diary/2026/2026-07-27.md",
+    "diary/2026/2026-07-23.md",
     "diary/2026/2026-07-25.md",
     "learning/health/hiit-aerobic-strength-training-basics.md",
     "/question-logs/2026-07-25.md",
@@ -211,7 +212,6 @@
     "/learning/basic-knowledge/http-get-post-navigation.md",
     "learning/basic-knowledge/http-get-post-navigation.md",
     "/learning/basic-knowledge",
-    "/learning/architecture/requirements-definition/requirements-definition-guide.md",
     "/learning/architecture/requirements-definition",
     "learning/architecture/requirements-definition",
     "/learning/architecture"
