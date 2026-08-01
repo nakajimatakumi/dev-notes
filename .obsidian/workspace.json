@@ -193,6 +193,8 @@
   },
   "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "question-logs/2026-07-26.md",
+    "learning/health/home-hiit-exercises-guide.md",
     "learning/health/hiit-aerobic-strength-training-basics.md",
     "learning/basic-knowledge/http-get-post-navigation.md",
     "learning/basic-knowledge/http-error-status-codes.md",
@@ -226,7 +228,6 @@
     "learning/ai",
     "learning/architecture/event-driven-design",
     "learning/architecture",
-    "learning",
-    "ようこそ.md"
+    "learning"
   ]
 }
