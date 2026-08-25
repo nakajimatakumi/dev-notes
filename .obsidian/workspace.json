@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/architecture/docs-as-code/personal-development-design-docs-in-git.md",
+                "file": "learning/frontend/react-vue-new-development-selection-cases.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "personal-development-design-docs-in-git"
+              "title": "react-vue-new-development-selection-cases"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "ファイルエクスプローラ"
@@ -193,6 +195,10 @@
   },
   "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "learning/frontend/react-vue-state-update-differences.md",
+    "learning/frontend/react-vue-new-development-selection-cases.md",
+    "learning/frontend/react-vue-comparison.md",
+    "learning/architecture/docs-as-code/personal-development-design-docs-in-git.md",
     "learning/music/rock-genres-guide.md",
     "learning/music/rock-band-classification.md",
     "learning/music/punk-and-post-punk.md",
@@ -216,11 +222,7 @@
     "diary/2026/2026-07-22.md",
     "diary/2026/2026-07-21.md",
     "learning/architecture/event-driven-design/event-definition-learning-roadmap.md",
-    "question-logs/2026-07-22.md",
     "learning/health",
-    "question-logs/2026-07-20.md",
-    "question-logs/2026-07-21.md",
-    "learning/ai/generative-ai-performance-improvements.md",
     "diary/2026",
     "diary",
     "learning/architecture/requirements-definition",

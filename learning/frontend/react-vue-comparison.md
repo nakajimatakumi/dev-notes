@@ -8,6 +8,7 @@ ReactとVueは、どちらもコンポーネントを組み合わせてユーザ
 
 - Reactは、JavaScriptやTypeScriptの関数とJSXを使い、値とイベント処理を明示的にUIへ渡す。
 - Vueは、Single-File Component（SFC）のテンプレート、ロジック、スタイルを組み合わせ、ディレクティブによって状態とDOMを結び付ける。
+- Reactは再利用する振る舞いをコンポーネントやCustom Hookへ抽象化する傾向があり、Vueはそれらに加えて既存要素へ低レベルDOM処理を付加するカスタムディレクティブを持つ。
 - Reactのstateは各レンダー時点のスナップショットとして扱い、更新関数を呼び出して次のレンダーを要求する。
 - Vueはリアクティブな値への依存を追跡し、その値が変わると依存している箇所を更新する。
 - 性能はアプリケーションの構成、レンダリング方法、データ量、実装、ビルド設定によって変わるため、「常にどちらが速い」とは判断できない。
@@ -27,6 +28,7 @@ ReactとVueは、どちらもコンポーネントを組み合わせてユーザ
 | 条件分岐 | `if`、三項演算子、`&&` | `v-if`、`v-else`、`v-show` |
 | 繰り返し | `map()`などのJavaScript | `v-for` |
 | ロジックの再利用 | Custom Hook | Composable |
+| 既存HTML要素への再利用可能な振る舞いの付加 | propsで処理を渡す。再利用時はコンポーネントやCustom Hookへ抽象化する | 組み込み・カスタムディレクティブを要素へ付けられる。通常のUI部品はコンポーネント化する |
 | コンポーネント間の内容差し込み | `children` | Slot |
 | TypeScript | JSXを含むファイルでは主に`.tsx`を使う | `<script setup lang="ts">`とテンプレートを組み合わせられる |
 | 大規模アプリの構成 | ルーティングやデータ取得を含むReactフレームワークの利用が推奨される | Vue RouterやPiniaなどVue向けの公式ライブラリが用意されている |
@@ -83,88 +85,82 @@ defineProps<{ users: User[] }>();
 
 Reactは「マークアップもJavaScriptの処理の中で組み立てる」という感覚が強い。Vueは「テンプレートへ状態や振る舞いを宣言する」という感覚が強い。この違いが、コードの見た目だけでなく、条件分岐やイベント処理の整理方法にも表れる。
 
-## HTML要素への振る舞いの付け方
+## 既存HTML要素を拡張する方針の違い
 
-チェックボックスのような既存のHTML要素へ独自処理を追加する場合、ReactとVueでは状態との結び付け方が異なる。
+比較すべきなのはチェックボックス単体の書き方ではなく、既存の`button`、`input`、`div`などへ独自の振る舞いを追加するとき、その要素を拡張して使い続けるのか、新しいコンポーネントとして抽象化するのかという方針である。
 
-### Reactのチェックボックス
+### Reactはpropsで処理を渡し、再利用時はコンポーネントへ抽象化する
+
+Reactでは、既存HTML要素に対して、あらかじめReact DOMが対応しているpropsを使う。イベント処理は`onClick`や`onChange`などへJavaScript関数を渡して追加する。
 
 ```tsx
-import { useState, type ChangeEvent } from "react";
+<button onClick={handleSave}>保存</button>
+```
 
-export default function NotificationSetting() {
-  const [enabled, setEnabled] = useState(false);
+独自の`track`属性や`focus`属性をReactの機能として既存要素へ追加するのではなく、再利用したい責務に応じてコンポーネントやCustom Hookへ切り出す。
 
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
-    const nextEnabled = event.currentTarget.checked;
-    setEnabled(nextEnabled);
-    saveNotificationSetting(nextEnabled);
+```tsx
+type SaveButtonProps = {
+  onSave: () => void;
+};
+
+function SaveButton({ onSave }: SaveButtonProps) {
+  function handleClick() {
+    recordAction("save");
+    onSave();
   }
 
-  return (
-    <label>
-      <input
-        type="checkbox"
-        checked={enabled}
-        onChange={handleChange}
-      />
-      通知を有効にする
-    </label>
-  );
+  return <button onClick={handleClick}>保存</button>;
 }
 ```
 
-Reactでは、`checked`で現在の状態を渡し、`onChange`で変更を受け取る。このようにReactのstateで値を管理する入力をcontrolled inputと呼ぶ。`checked`を指定した場合は、通常、値を同期的に更新する`onChange`も必要になる。
+この方法では、見た目、状態、イベント、アクセシビリティを含むまとまりを`SaveButton`という新しいUI部品として扱う。対象要素を利用箇所ごとに拡張するよりも、コンポーネントのpropsを公開インターフェースとして再利用する考え方が中心になる。
 
-短い処理ならJSXへ直接書くこともできる。
+ただし、一度しか使わない短い処理であれば、既存要素のイベントpropsへ直接渡してよい。すべての処理をコンポーネント化するという意味ではない。
 
-```tsx
-<input
-  type="checkbox"
-  checked={enabled}
-  onChange={(event) => setEnabled(event.currentTarget.checked)}
-/>
+### Vueはディレクティブによって既存要素へ振る舞いを付加できる
+
+Vueでは、`v-if`、`v-show`、`v-model`、`v-bind`などの組み込みディレクティブを、既存HTML要素へ宣言的に付けられる。
+
+```vue
+<input v-model="keyword" v-focus>
 ```
 
-ただし、複数の更新、通信、検証などを行う場合は、名前を付けた関数へ切り出した方が目的を読み取りやすい。
-
-### Vueのチェックボックス
+さらに、低レベルなDOM操作を再利用する必要がある場合は、カスタムディレクティブを定義できる。
 
 ```vue
 <script setup lang="ts">
-import { ref } from "vue";
-
-const enabled = ref(false);
-
-function handleChange(event: Event) {
-  const target = event.currentTarget as HTMLInputElement;
-  saveNotificationSetting(target.checked);
-}
+const vFocus = {
+  mounted(element: HTMLInputElement) {
+    element.focus();
+  }
+};
 </script>
 
 <template>
-  <label>
-    <input
-      v-model="enabled"
-      type="checkbox"
-      @change="handleChange"
-    >
-    通知を有効にする
-  </label>
+  <input v-focus>
 </template>
 ```
 
-Vueでは、`v-model`が入力要素と状態の同期をまとめて表現する。独自処理は`@change`などのイベントディレクティブから呼び出せる。
+`v-focus`は、`input`を別のコンポーネントに置き換えず、既存要素へフォーカス処理だけを付加している。この仕組みにより、Vueはプレーンな要素へ横断的な振る舞いを宣言的に追加できる。
 
-したがって、本質的な違いは「Reactは要素内に処理を書き、Vueは書かない」ことではない。
+ただし、Vue公式ドキュメントでは、コンポーネントを主要な構成要素、Composableを状態を持つロジックの再利用手段と位置付けている。カスタムディレクティブは、直接DOMを操作しなければ実現できない処理に限って使うことが推奨されている。複雑なUIや業務的な意味を持つ部品まで、すべて既存要素の拡張として作る方針ではない。
 
-- Reactは、JSXのpropsとして値やJavaScript関数を要素へ渡す。
-- Vueは、テンプレートディレクティブによって値や処理を要素へ結び付ける。
-- どちらも短いインライン処理を書けるが、複雑な処理は関数へ切り出せる。
+### 方針の比較
 
-ソースコード上では要素の属性部分に処理が見えるが、ブラウザへ出力されるHTML属性へ任意の関数コードがそのまま保存される、という意味ではない。
+| 判断 | React | Vue |
+| --- | --- | --- |
+| 利用箇所だけのイベント処理 | 既存要素のイベントpropsへ関数を渡す | `@click`などのイベントディレクティブで関数を呼ぶ |
+| 状態とフォーム要素の同期 | `value`または`checked`と`onChange`を明示する | `v-model`で宣言できる |
+| UI部品として再利用 | コンポーネント化する | コンポーネント化する |
+| 状態を持つロジックの再利用 | Custom Hookへ切り出す | Composableへ切り出す |
+| 既存要素へ低レベルDOM処理を再利用可能な形で付加 | `ref`やHookを利用する設計を検討する | カスタムディレクティブを利用できる |
+
+したがって、VueはReactよりも「既存要素へ振る舞いを付加する」ための明示的な仕組みを持つ。一方で、両者ともアプリケーションの中心的なUI設計ではコンポーネント化を重視する。違いを「既存要素を拡張するVue、必ず新規要素を作るReact」と二分するのではなく、Vueには限定用途のディレクティブという追加の選択肢がある、と捉えるのが適切である。
 
 ## 状態管理と更新の考え方
+
+状態更新時に実行し直す範囲、派生値、子コンポーネント、状態更新方法の違いは、[ReactとVueの状態更新時の差分](./react-vue-state-update-differences.md)にまとめる。
 
 ### Reactのstateはレンダー時点のスナップショット
 
@@ -230,6 +226,8 @@ ReactとVueの両方がTypeScriptに対応している。ReactではPropsやHook
 
 ## 選定時の判断基準
 
+実際の新規プロダクトやアプリケーションで挙げられた理由は、[React・Vueの新規開発における技術選定事例](./react-vue-new-development-selection-cases.md)にまとめる。
+
 ### Reactが候補になりやすい場合
 
 - JavaScriptやTypeScriptの式と関数を中心にUIを組み立てたい。
@@ -258,7 +256,7 @@ ReactとVueの両方がTypeScriptに対応している。ReactではPropsやHook
 
 - ReactはJSXとJavaScript関数を中心に、値と処理を明示的にUIへ渡す。
 - VueはHTMLに近いテンプレートとディレクティブを中心に、状態とDOMを結び付ける。
-- チェックボックスでは、Reactの`checked`と`onChange`、Vueの`v-model`と`@change`に違いが表れやすい。
+- Reactはprops、コンポーネント、Custom Hookを中心に振る舞いを構成し、Vueはそれらに相当する仕組みに加えて、既存要素へ低レベルDOM処理を付加するカスタムディレクティブを持つ。
 - Reactはstate更新と再レンダー、Vueはリアクティブな依存追跡という考え方を理解すると、構文の理由が分かりやすい。
 - 性能はフレームワーク名だけで決めず、同じ要件と条件で計測する。
 - 選定では、文法、性能、思想に加えて、エコシステム、TypeScript、テスト、移行、チームの経験、保守性を比較する。
@@ -272,6 +270,7 @@ ReactとVueの両方がTypeScriptに対応している。ReactではPropsやHook
 - [React: Using TypeScript](https://react.dev/learn/typescript)
 - [Vue.js: Introduction](https://vuejs.org/guide/introduction.html)
 - [Vue.js: Form Input Bindings](https://vuejs.org/guide/essentials/forms.html)
+- [Vue.js: Custom Directives](https://vuejs.org/guide/reusability/custom-directives.html)
 - [Vue.js: Rendering Mechanism](https://vuejs.org/guide/extras/rendering-mechanism.html)
 - [Vue.js: State Management](https://vuejs.org/guide/scaling-up/state-management.html)
 - [Vue.js: Using Vue with TypeScript](https://vuejs.org/guide/typescript/overview.html)
