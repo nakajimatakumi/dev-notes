@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/frontend/react-vue-new-development-selection-cases.md",
+                "file": "learning/health/home-hiit-exercises-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "react-vue-new-development-selection-cases"
+              "title": "home-hiit-exercises-guide"
             }
           }
         ]
@@ -195,9 +195,10 @@
   },
   "active": "59f39989659268d6",
   "lastOpenFiles": [
+    "learning/health/hiit-aerobic-strength-training-basics.md",
     "learning/frontend/react-vue-state-update-differences.md",
-    "learning/frontend/react-vue-new-development-selection-cases.md",
     "learning/frontend/react-vue-comparison.md",
+    "learning/frontend/react-vue-new-development-selection-cases.md",
     "learning/architecture/docs-as-code/personal-development-design-docs-in-git.md",
     "learning/music/rock-genres-guide.md",
     "learning/music/rock-band-classification.md",
@@ -210,7 +211,6 @@
     "diary/2026/2026-07-26.md",
     "question-logs/2026-07-26.md",
     "learning/health/home-hiit-exercises-guide.md",
-    "learning/health/hiit-aerobic-strength-training-basics.md",
     "learning/basic-knowledge/http-error-status-codes.md",
     "learning/health/hiit-and-running-guide.md",
     "learning/architecture/requirements-definition/requirements-definition-guide.md",
