@@ -37,7 +37,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "ファイルエクスプローラ"
@@ -177,8 +179,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7705861dc6b5b3d9",
+  "active": "7e43ecbcb49ded68",
   "lastOpenFiles": [
+    "question-logs/2026-07-31.md",
+    "learning/architecture/docs-as-code/personal-development-design-docs-in-git.md",
+    "/question-logs/2026-07-31.md",
+    "/question-logs/2026-07-26.md",
+    "question-logs/2026-07-26.md",
+    "/question-logs",
+    "/learning/health/home-hiit-exercises-guide.md",
+    "learning/health/home-hiit-exercises-guide.md",
+    "/learning/health",
+    "/learning/architecture/docs-as-code/personal-development-design-docs-in-git.md",
+    "/learning/architecture/docs-as-code",
+    "learning/architecture/docs-as-code",
+    "/learning/architecture",
+    "/learning",
     "diary/2026/2026-07-26.md",
     "diary/2026/2026-07-27.md",
     "diary/2026/2026-07-23.md",
@@ -186,15 +202,12 @@
     "learning/health/hiit-aerobic-strength-training-basics.md",
     "/question-logs/2026-07-25.md",
     "question-logs/2026-07-25.md",
-    "/question-logs",
     "/learning/health/hiit-aerobic-strength-training-basics.md",
     "/diary/2026/2026-07-25.md",
     "/diary/2026/2026-07-24.md",
     "diary/2026/2026-07-24.md",
     "/diary/2026",
     "/diary",
-    "/learning/health",
-    "/learning",
     "diary/2026/2026-07-22.md",
     "diary/2026/2026-07-21.md",
     "diary/2026/2026-07-20.md",
@@ -202,18 +215,7 @@
     "learning/architecture/requirements-definition/requirements-definition-guide.md",
     "question-logs/2026-07-22.md",
     "question-logs/2026-07-21.md",
-    "learning/health/hiit-and-running-guide.md",
     "learning/health",
-    "/question-logs/README.md",
-    "/question-logs/2026-07-22.md",
-    "/question-logs/2026-07-21.md",
-    "/question-logs/2026-07-20.md",
-    "/learning/health/hiit-and-running-guide.md",
-    "/learning/basic-knowledge/http-get-post-navigation.md",
-    "learning/basic-knowledge/http-get-post-navigation.md",
-    "/learning/basic-knowledge",
-    "/learning/architecture/requirements-definition",
-    "learning/architecture/requirements-definition",
-    "/learning/architecture"
+    "/learning/basic-knowledge"
   ]
 }
